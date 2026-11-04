@@ -1,22 +1,31 @@
+* {box-sizing:border-box;
+}
 body {
   font-family: sans-serif;
   color: #333333;
+}
+main {
+  background-color:aquamarine;
 }
 /* Título principal */
 header h1 {
   color: #2563eb;
 }
 /* Menú principal */
-header nav ul li a {
+header {
   color: #1d4ed8;
+  background-color:#f20e0e;
+  background-image: url("recursos/img.jpg");
 }
 /* Títulos de productos */
 article h2 {
   color: #7c3aed;
 }
 /* Descripciones y precios */
-article p {
+article {
   color: #475569;
+  padding: 20px 20px 20px 20px;
+  margin: 15px 15px 15px 15px;
 }
 /* Enlaces de compra */
 .btn-comprar {
@@ -26,12 +35,14 @@ article p {
 aside h2 {
   color: #ea580c;
 }
-aside ul li a {
+aside {
   color: #0891b2;
+  background-color:brown;
 }
 /* Pie de página */
-footer p {
+footer {
   color: #64748b;
+  background-color:burlywood;
 }
 footer ul li a {
   color: #dc2626;
