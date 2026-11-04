@@ -1,49 +1,58 @@
+:root {
+  --color-primario: #f4c1ef;
+  --color-secundario: #914506;
+  --color-fondo: #f89a97;
+  --color-texto: #ffffff;
+
+  --fuente-principal: "Saira", sans-serif;
+
+  --espaciado-pequeño: 8px;
+  --espaciado-medio: 16px;
+  --espaciado-grande: 24;
+
+}
 * {box-sizing:border-box;
 }
 body {
-  font-family: sans-serif;
-  color: #333333;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
 }
 main {
-  background-color:aquamarine;
+  background-color: var(--color-fondo);
 }
-/* Título principal */
-header h1 {
-  color: #2563eb;
-}
-/* Menú principal */
+
 header {
-  color: #1d4ed8;
-  background-color:#f20e0e;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
   background-image: url("recursos/img.jpg");
+
 }
-/* Títulos de productos */
-article h2 {
-  color: #7c3aed;
-}
-/* Descripciones y precios */
+
 article {
-  color: #475569;
-  padding: 20px 20px 20px 20px;
-  margin: 15px 15px 15px 15px;
+  color: var(--color-secundario);
+  padding: var(--espaciado-grande);
+  margin: var(--espaciado-medio);
 }
-/* Enlaces de compra */
+
 .btn-comprar {
-  color: #059669;
+  color: var(--color-texto);
 }
-/* Menú lateral */
+
 aside h2 {
-  color: #ea580c;
+  color: var(--color-texto);
 }
 aside {
-  color: #0891b2;
-  background-color:brown;
+  color: var(--color-texto);
+  background-color: var(--color-primario);
 }
-/* Pie de página */
+
 footer {
-  color: #64748b;
-  background-color:burlywood;
-}
-footer ul li a {
-  color: #dc2626;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
 }

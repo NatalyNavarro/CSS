@@ -35,3 +35,38 @@ Con border-box el padding y el borde se cuentan dentro de los 300px, así que el
 Margen grande en un elemento hermano: el elemento con margen grande empuja a sus hermanos y se aleja de ellos.
 
 Con ese cambio los vecinos se desplazan, y el espacio entre los dos aumenta.
+
+## ## Hallazgos: Centralización de Identidad Visual y Espaciado
+
+### 1. Variables declaradas en `:root`
+
+**Colores**
+- `--color-primario: #f4c1ef;`
+- `--color-secundario: #914506;`
+- `--color-fondo: #f89a97;`
+- `--color-texto: #ffffff;`
+
+
+**Tipografía**
+- `--fuente-principal` (Saira, importada desde Google Fonts)
+
+**Espaciados**
+- `--espaciado-pequeno` (8px), 
+- `--espaciado-medio` (15px), 
+- `--espaciado-grande` (20px)
+
+### 2. Ventaja de reutilizar medidas de margen y relleno
+
+Es mejor usar las mismas medidas de espacio en toda la página
+en lugar de inventar un número nuevo en cada parte. Así todas las tarjetas
+y secciones se ven ordenadas y con el mismo "aire". Además, si quiero
+cambiar el espacio, solo lo cambio en un lugar y se actualiza todo, sin
+tener que buscar uno por uno.
+
+### 3. Cómo `:root` previene colisiones visuales
+
+Cuando la hoja de estilos crece, es fácil que dos selectores terminen con
+tonos "casi iguales" o medidas ligeramente distintas. Al tener una única
+fuente de verdad en `:root`, cada color y medida tiene un nombre y un solo
+lugar donde se define, lo que evita inconsistencias, duplicados y errores
+al agregar nuevos componentes.
