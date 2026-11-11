@@ -70,3 +70,23 @@ tonos "casi iguales" o medidas ligeramente distintas. Al tener una única
 fuente de verdad en `:root`, cada color y medida tiene un nombre y un solo
 lugar donde se define, lo que evita inconsistencias, duplicados y errores
 al agregar nuevos componentes.
+
+## Hallazgos: Pseudoclases y Pseudoelementos
+
+### 1. Pseudoclase vs. pseudoelemento
+
+Una pseudoclase (`:hover`, `:focus`, `:active`) cambia el estilo de un elemento
+que ya existe cuando el usuario interactúa con él. Un pseudoelemento
+(`::before`, `::after`) no reacciona a eventos, sino que inyecta contenido
+nuevo que no está en el HTML, como el punto del menú o la insignia "¡Oferta!".
+
+### 2. Importancia de :focus en la accesibilidad
+
+Quienes navegan con la tecla Tab necesitan ver en qué enlace o botón están
+ubicados. `:focus` con un contorno visible lo permite, y quitarlo hace la
+página difícil de usar, por lo que es una buena práctica de accesibilidad.
+
+### 3. Decoración con ::before/::after en lugar de HTML
+
+Poner iconos o etiquetas desde CSS mantiene el HTML limpio, sin etiquetas
+vacías, y permite cambiar el diseño en un solo lugar sin editar cada tarjeta.
