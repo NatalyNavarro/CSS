@@ -1,0 +1,18 @@
+article {
+  position: relative;
+  color: var(--color-secundario);
+  padding: var(--espaciado-grande);
+  margin: var(--espaciado-medio);
+}
+
+article h2::after {
+  content: "¡Oferta!";
+  margin-left: var(--espaciado-grande);
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  padding: 2px var(--espaciado-pequeño);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  vertical-align: middle;
+}

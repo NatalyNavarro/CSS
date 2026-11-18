@@ -13,11 +13,9 @@
   --espaciado-medio: 16px;
   --espaciado-grande: 24px;
 }
-
 @import url("components/menu-lateral.css");
 @import url("components/tarjetas.css");
 @import url("components/botones.css");
-
 
 * { box-sizing: border-box; }
 
