@@ -90,3 +90,36 @@ página difícil de usar, por lo que es una buena práctica de accesibilidad.
 
 Poner iconos o etiquetas desde CSS mantiene el HTML limpio, sin etiquetas
 vacías, y permite cambiar el diseño en un solo lugar sin editar cada tarjeta.
+
+## Hallazgos: Arquitectura BEM y Modularidad
+
+### 1. ¿Qué significa BEM y cómo se escribe?
+
+BEM significa **Bloque, Elemento, Modificador**. Es una forma de ponerle nombre a las clases de CSS para que sean ordenadas y fáciles de entender. Se escribe así:
+
+```
+bloque__elemento--modificador
+```
+
+- **Bloque**: el componente completo, por ejemplo `card` (la tarjeta del producto).
+- **Elemento**: una parte que vive dentro del bloque, se une con doble guion bajo. Por ejemplo `card__title` (el título de la tarjeta) o `card__price` (el precio).
+- **Modificador**: una variación del bloque o del elemento, se une con doble guion medio. Por ejemplo `card--destacada` (una tarjeta resaltada) o `btn--secundario` (un botón con otro estilo).
+
+Con solo leer el nombre de la clase ya se sabe a qué componente pertenece y qué función cumple.
+
+### 2. ¿Por qué dividir el CSS en varios archivos ayuda al trabajo en equipo?
+
+Antes todo el CSS estaba en un solo archivo grande. Ahora cada componente tiene su propio archivo (`tarjeta.css`, `botones.css`, `menu-lateral.css`) y todos se conectan al `style.css` principal con `@import`.
+
+Esto ayuda porque:
+
+- Cada persona del equipo puede trabajar en un componente distinto sin pisar el trabajo de otra.
+- Es más fácil encontrar el código: si hay un problema con los botones, se abre `botones.css` y no hay que buscar entre cientos de líneas.
+- Se evitan conflictos en Git, porque es menos probable que dos personas editen el mismo archivo al mismo tiempo.
+- Los componentes se pueden reutilizar en otros proyectos.
+
+### 3. ¿Cómo BEM evita la "guerra de especificidad"?
+
+En CSS, cuando dos reglas afectan al mismo elemento, gana la que tiene más "peso" (especificidad). Con selectores anidados como `.producto h2` o `article.destacado h2`, el peso sube y se vuelve difícil de controlar: para cambiar algo hay que escribir un selector todavía más pesado, y así se genera una guerra de reglas.
+
+Con BEM cada elemento tiene su propia clase única (por ejemplo `.card__title`) y todas las reglas usan **una sola clase**, por lo que todas pesan lo mismo. Así ninguna regla le gana a otra por accidente y el resultado depende solo del orden en que se escriben. Esto lo comprobé en las DevTools del navegador, donde cada regla depende de una sola clase y el diseño se ve igual que antes.
