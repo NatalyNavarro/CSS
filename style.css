@@ -1,3 +1,7 @@
+@import url("components/menu-lateral.css");
+@import url("components/tarjetas.css");
+@import url("components/botones.css");
+
 :root {
   --color-primario: #f4c1ef;
   --color-secundario: #914506;
@@ -10,67 +14,15 @@
   --espaciado-grande: 24px;
 }
 
+@import url("components/menu-lateral.css");
+@import url("components/tarjetas.css");
+@import url("components/botones.css");
+
+
 * { box-sizing: border-box; }
 
 body { font-family: var(--fuente-principal); font-weight: 400; color: var(--color-texto); }
 
 header, main, footer { background-color: var(--color-fondo); }
-header { background-image: url("recursos/img.jpg"); }
+header { background-image: url(recursos/cerezo.jpg); }
 
-/* ASIDE */
-aside { background-color: var(--color-primario); }
-
-aside a {
-  display: block;
-  padding: var(--espaciado-pequeño) var(--espaciado-medio);
-  color: var(--color-texto);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-aside a::before { content: "• "; color: var(--color-texto); }
-aside a:hover { background-color: var(--color-secundario); color: var(--color-primario); }
-aside a:hover::before { color: var(--color-primario); }
-aside a:focus { outline: 3px solid var(--color-secundario); outline-offset: 2px; }
-
-/* TARJETAS */
-article {
-  position: relative;
-  color: var(--color-secundario);
-  padding: var(--espaciado-grande);
-  margin: var(--espaciado-medio);
-}
-
-article h2::after {
-  content: "¡Oferta!";
-  margin-left: var(--espaciado-grande);
-  background-color: var(--color-secundario);
-  color: var(--color-texto);
-  padding: 2px var(--espaciado-pequeño);
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  vertical-align: middle;
-}
-
-/* BOTÓN */
-.btn-comprar {
-  color: var(--color-texto);
-  background-color: var(--color-secundario);
-  padding: var(--espaciado-pequeño) var(--espaciado-medio);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-}
-
-.btn-comprar:hover {
-  background-color: var(--color-boton);
-}
-
-.btn-comprar:active { /* Al hacer clic: cambia de color y se hunde */
-  background-color: var(--color-primario);
-  color: var(--color-secundario);
-  transform: scale(0.95);
-}

@@ -1,0 +1,19 @@
+.btn-comprar {
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
+  padding: var(--espaciado-pequeño) var(--espaciado-medio);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--color-boton);
+}
+
+.btn-comprar:active { /* Al hacer clic: cambia de color y se hunde */
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  transform: scale(0.95);
+}
