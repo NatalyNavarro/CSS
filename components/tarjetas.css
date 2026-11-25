@@ -1,11 +1,11 @@
-article {
+.card {
   position: relative;
   color: var(--color-secundario);
   padding: var(--espaciado-grande);
   margin: var(--espaciado-medio);
 }
 
-article h2::after {
+.card__title::after {
   content: "¡Oferta!";
   margin-left: var(--espaciado-grande);
   background-color: var(--color-secundario);
@@ -15,4 +15,8 @@ article h2::after {
   font-size: 0.8rem;
   font-weight: 700;
   vertical-align: middle;
+}
+
+.card--destacada {
+  border: 3px solid var(--color-secundario);
 }

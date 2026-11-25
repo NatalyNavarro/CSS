@@ -13,14 +13,20 @@
   --espaciado-medio: 16px;
   --espaciado-grande: 24px;
 }
-@import url("components/menu-lateral.css");
-@import url("components/tarjetas.css");
-@import url("components/botones.css");
 
 * { box-sizing: border-box; }
 
-body { font-family: var(--fuente-principal); font-weight: 400; color: var(--color-texto); }
+body { 
+  font-family: var(--fuente-principal); 
+  font-weight: 400; color: var(--color-texto); 
+}
 
-header, main, footer { background-color: var(--color-fondo); }
-header { background-image: url(recursos/cerezo.jpg); }
+header, main, footer { 
+  background-color: var(--color-fondo); 
+}
 
+header { 
+  background-image: url(recursos/cerezo.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

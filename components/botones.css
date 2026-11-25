@@ -12,11 +12,12 @@
   background-color: var(--color-boton);
 }
 
-.btn-:active { /* Al hacer clic: cambia de color y se hunde */
+.btn:active { /* Al hacer clic: cambia de color y se hunde */
   background-color: var(--color-primario);
   color: var(--color-secundario);
   transform: scale(0.95);
 }
-.btn--destacado {color: var(--color-boton-destacado);
-
+.btn--secundario {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
 }

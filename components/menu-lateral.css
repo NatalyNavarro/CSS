@@ -1,6 +1,8 @@
-aside { background-color: var(--color-primario); }
+aside { 
+  background-color: var(--color-primario); 
+}
 
-aside a {
+.aside__link {
   display: block;
   padding: var(--espaciado-pequeño) var(--espaciado-medio);
   color: var(--color-texto);
@@ -9,7 +11,20 @@ aside a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-aside a::before { content: "• "; color: var(--color-texto); }
-aside a:hover { background-color: var(--color-secundario); color: var(--color-primario); }
-aside a:hover::before { color: var(--color-primario); }
-aside a:focus { outline: 3px solid var(--color-secundario); outline-offset: 2px; }
+.aside__link::before { 
+  content: "• "; color: var(--color-texto); 
+}
+
+.aside__link:hover { 
+  background-color: var(--color-secundario); 
+  color: var(--color-primario); 
+}
+
+.aside__link:hover::before { 
+  color: var(--color-primario); 
+}
+
+.aside__link:focus { 
+  outline: 3px solid var(--color-secundario); 
+  outline-offset: 2px; 
+}
