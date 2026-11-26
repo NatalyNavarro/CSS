@@ -1,4 +1,6 @@
 .btn {
+  display: inline-block;
+  text-decoration: none;
   color: var(--color-texto);
   background-color: var(--color-secundario);
   padding: var(--espaciado-pequeño) var(--espaciado-medio);
@@ -8,7 +10,7 @@
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.btn-:hover {
+.btn:hover {
   background-color: var(--color-boton);
 }
 

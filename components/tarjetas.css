@@ -1,9 +1,31 @@
+.catalogo__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaciado-medio);
+  padding: var(--espaciado-medio);
+}
+
+.catalogo__item {
+  flex:1 1 200px;
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 200px;
   position: relative;
   color: var(--color-secundario);
   padding: var(--espaciado-grande);
   margin: var(--espaciado-medio);
 }
+
+.card__title {
+  margin-top: var(--espaciado-medio);
+  line-height: 1.2;
+  min-height: 2.4em;
+}
+
 
 .card__title::after {
   content: "¡Oferta!";
@@ -16,6 +38,34 @@
   font-weight: 700;
   vertical-align: middle;
 }
+
+.card__descripcion {
+  flex-grow: 1;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--espaciado-medio);
+}
+
+.card__price {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card__price--original {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.card__button {
+  align-self: flex-start;
+}
+
 
 .card--destacada {
   border: 3px solid var(--color-secundario);
