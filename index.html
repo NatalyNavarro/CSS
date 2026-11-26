@@ -4,99 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Online</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
-    <div class="app-layout">
-      <header class="header">
-        <h1 class="header__title">Mi catalogo - Tienda Online</h1>
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">Inicio</a></li>
-            <li class="header__item"><a class="header__link" href="#">Productos</a></li>
-            <li class="header__item"><a class="header__link" href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <div class="main-wrapper">
-        <aside class="aside">
-          <h2 class="aside__title">Categorías</h2>
-          <ul class="aside__list">
-            <li class="aside__item"><a class="aside__link" href="#">Computadores</a></li>
-            <li class="aside__item"><a class="aside__link" href="#">Celulares</a></li>
-            <li class="aside__item"><a class="aside__link" href="#">Accesorios</a></li>
-            <li class="aside__item"><a class="aside__link" href="#">Tecnología</a></li>
-          </ul>
-        </aside>
-
-        <main class="main">
-          <section class="catalogo">
-            <h2 class="catalogo__title">Catalogo - Tienda Online</h2>
-
-            <div class="catalogo__lista">
-              <div class="catalogo__item">
-              <article class="card card--destacada">
-                <h2 class="card__title">Laptop Gamer</h2>
-                <p class="card__descripcion">Portátil de alto rendimiento para videojuegos y trabajo profesional.</p>
-                <div class="card__price-wrapper">
-                  <p class="card__price">$1.200</p>
-                  <p class="card__price card__price--original">$1.500</p>
-                </div>
-                <a href="#" class="btn card__button">Comprar</a>
-              </article>
-              </div>
-
-            <div class="catalogo__item">
-              <article class="card">
-                <h2 class="card__title">Smartphone Pro</h2>
-                <p class="card__descripcion">Teléfono inteligente con cámara avanzada y gran autonomía.</p>
-                <div class="card__price-wrapper">
-                  <p class="card__price">$800</p>
-                  <p class="card__price card__price--original">$950</p>
-                </div>
-                <a href="#" class="btn card__button">Comprar</a>
-              </article>
-            </div>
-
-            <div class="catalogo__item">
-              <article class="card">
-                <h2 class="card__title">Audífonos Bluetooth</h2>
-                <p class="card__descripcion">Sonido fuerte y cancelación de ruido.</p>
-                <div class="card__price-wrapper">
-                  <p class="card__price">$120</p>
-                  <p class="card__price card__price--original">$150</p>
-                </div>
-                <a href="#" class="btn card__button">Comprar</a>
-              </article>
-            </div>
-
-            <div class="catalogo__item">
-              <article class="card">
-                <h2 class="card__title">Smartwatch</h2>
-                <p class="card__descripcion">Reloj inteligente con análisis de actividad física.</p>
-                <div class="card__price-wrapper">
-                  <p class="card__price">$250</p>
-                  <p class="card__price card__price--original">$300</p>
-                </div>
-                <a href="#" class="btn card__button">Comprar</a>
-              </article>
-            </div>
-          </section>
-        </main>
-      </div>
-
-      <footer class="footer">
-        <p class="footer__text">2026 Tienda Online. Todos los derechos reservados.</p>
-        <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Facebook</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Instagram</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">X</a></li>
+    <header class="header">
+      <h1 class="header__title">Mi catalogo - Tienda Online</h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#">Inicio</a></li>
+          <li class="header__item"><a href="#">Productos</a></li>
+          <li class="header__item"><a href="#">Contacto</a></li>
         </ul>
-      </footer>
-    </div>
+      </nav>
+    </header>
+
+    <aside class="aside">
+      <h2 class="aside__title">Categorías</h2>
+      <ul class="aside__list">
+        <li class="aside__item"><a class="aside__link" href="#">Computadores</a></li>
+        <li class="aside__item"><a class="aside__link" href="#">Celulares</a></li>
+        <li class="aside__item"><a class="aside__link" href="#">Accesorios</a></li>
+        <li class="aside__item"><a class="aside__link" href="#">Tecnología</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+      <section class="catalogo">
+        <h2 class="catalogo__title">Catalogo - Tienda Online</h2>
+
+        <article class="card card--destacada">
+          <h2 class="card__title">Laptop Gamer</h2>
+          <p class="card__descripcion"> Portátil de alto rendimiento para videojuegos y trabajo profesional.</p>
+          <p class="card__price">Precio: $1.200</p>
+          <a href="#" class="btn btn--secundario">Comprar</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Smartphone Pro</h2>
+          <p class="card__descripcion">Teléfono inteligente con cámara avanzada y gran autonomía.</p>
+          <p class="card__price">Precio: $800</p>
+          <a href="#" class="btn">Comprar</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Audífonos Bluetooth</h2>
+          <p class="card__descripcion">Sonido fuerte y cancelación de ruido.</p>
+          <p class="card__price">Precio: $120</p>
+          <a href="#" class="btn">Comprar</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Smartwatch</h2>
+          <p class="card__descripcion">Reloj inteligente con análisis de actividad física.</p>
+          <p class="card__price">Precio: $250</p>
+          <a href="#" class="btn">Comprar</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">2026 Tienda Online. Todos los derechos reservados.</p>
+
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#">Facebook</a></li>
+        <li class="footer__item"><a href="#">Instagram</a></li>
+        <li class="footer__item"><a href="#">X</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

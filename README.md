@@ -123,31 +123,3 @@ Esto ayuda porque:
 En CSS, cuando dos reglas afectan al mismo elemento, gana la que tiene más "peso" (especificidad). Con selectores anidados como `.producto h2` o `article.destacado h2`, el peso sube y se vuelve difícil de controlar: para cambiar algo hay que escribir un selector todavía más pesado, y así se genera una guerra de reglas.
 
 Con BEM cada elemento tiene su propia clase única (por ejemplo `.card__title`) y todas las reglas usan **una sola clase**, por lo que todas pesan lo mismo. Así ninguna regla le gana a otra por accidente y el resultado depende solo del orden en que se escriben. Esto lo comprobé en las DevTools del navegador, donde cada regla depende de una sola clase y el diseño se ve igual que antes.
-
-## Hallazgos: Arquitectura Total con Flexbox
-
-### 1. ¿Por qué fue importante min-height: 100vh y flex-direction: column en el contenedor global?
-
-Con `min-height: 100vh` la página siempre mide al menos lo que mide la pantalla,
-aunque haya poco contenido. Y con `flex-direction: column` los bloques (header,
-contenido y footer) se apilan hacia abajo. Al darle `flex: 1` a la parte del
-medio, esta se estira y empuja el footer hasta el fondo. Así el pie de página
-no queda flotando a mitad de pantalla cuando hay poco contenido.
-
-### 2. ¿Cómo gap reemplazó los márgenes en los menús?
-
-Antes tenía que ponerle margen a cada enlace, y el último siempre quedaba con un
-espacio de más. Con `gap` le digo una sola vez al contenedor cuánto espacio
-dejar entre los elementos, y solo aparece entre ellos, no en los bordes.
-Además uso mis variables (`--espaciado-medio`), así que si quiero cambiar el
-espacio lo hago en un solo lugar.
-
-### 3. ¿Cómo BEM, Custom Properties y Flexbox hicieron una tarjeta resistente?
-
-BEM me da nombres claros para cada parte de la tarjeta, las variables me
-mantienen colores y espacios iguales en todas, y Flexbox hace que la
-descripción crezca y empuje el botón hacia abajo. Cada tarjeta va dentro de un
-contenedor (`catalogo__item`) que Flexbox estira a la altura de la más alta, y
-la tarjeta con `height: 100%` ocupa todo ese espacio. Por eso, aunque un
-producto tenga un texto más largo que otro, todas las tarjetas miden lo mismo
-y los botones quedan alineados al fondo.
